@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <UserSecretsId>dotnet-WindowsHost-CD03F625-D62A-4355-953D-8A174FFF20D1</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
