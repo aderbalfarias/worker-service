@@ -1,8 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk.Worker">
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <UserSecretsId>dotnet-LinuxHost-64FE0ADB-0C39-4DCD-8ED0-B54E87D34B8A</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
