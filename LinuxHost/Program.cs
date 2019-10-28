@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Serilog;
 
 namespace LinuxHost
 {
@@ -16,6 +17,7 @@ namespace LinuxHost
                 .ConfigureServices((hostContext, services) =>
                 {
                     services.AddHostedService<Worker>();
-                });
+                })
+                .UseSerilog((context, config) => config.ReadFrom.Configuration(context.Configuration));
     }
 }
