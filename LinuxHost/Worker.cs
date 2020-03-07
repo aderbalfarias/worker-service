@@ -15,6 +15,24 @@ namespace LinuxHost
             _logger = logger;
         }
 
+        public override async Task StartAsync(CancellationToken cancellationToken)
+        {
+            // Code implementation
+
+            _logger.LogInformation("Windows service started");
+
+            await base.StartAsync(cancellationToken);
+        }
+
+        public override async Task StopAsync(CancellationToken cancellationToken)
+        {
+            // Code implementation
+
+            _logger.LogInformation("Windows service stopped");
+
+            await base.StopAsync(cancellationToken);
+        }
+
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
             while (!stoppingToken.IsCancellationRequested)
@@ -22,6 +40,11 @@ namespace LinuxHost
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
                 await Task.Delay(1000, stoppingToken);
             }
+        }
+
+        public override void Dispose()
+        {
+            // Code implementation
         }
     }
 }
