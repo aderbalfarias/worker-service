@@ -10,6 +10,11 @@ namespace WindowsHost
     {
         private readonly ILogger<Worker> _logger;
 
+        public Worker(ILogger<Worker> logger)
+        {
+            _logger = logger;
+        }
+
         public override async Task StartAsync(CancellationToken cancellationToken)
         {
             // Code implementation
