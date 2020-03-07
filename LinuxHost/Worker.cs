@@ -17,9 +17,9 @@ namespace LinuxHost
 
         public override async Task StartAsync(CancellationToken cancellationToken)
         {
-            // Code implementation
+            _logger.LogInformation("Linux service started");
 
-            _logger.LogInformation("Windows service started");
+            // Code implementation
 
             await base.StartAsync(cancellationToken);
         }
@@ -28,9 +28,9 @@ namespace LinuxHost
         {
             // Code implementation
 
-            _logger.LogInformation("Windows service stopped");
-
             await base.StopAsync(cancellationToken);
+
+            _logger.LogInformation("Linux service stopped");
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
